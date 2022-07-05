@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+
 import './App.css';
+import useTimeout from './Hooks/useTimeout';
+
 
 function App() {
+
+  const ready = useTimeout();
+  const ready1 = useTimeout();
+ 
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h3>SetTimout</h3>
+     <div>
+      <div>
+      {ready ? "Ready" : "Not Ready"}
+      </div>
+      <div>
+      {ready1 ? "This is also Ready" : "Not Ready"}
+      </div>
+     </div>
     </div>
   );
 }
